@@ -9,12 +9,12 @@ import { getAuth, initializeAuth, getReactNativePersistence } from "firebase/aut
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyCQXHS2-PePVxlbp4rVymzL4yR0BBfbpTg",
-    authDomain: "publicchatapp-94200.firebaseapp.com",
-    projectId: "publicchatapp-94200",
-    storageBucket: "publicchatapp-94200.appspot.com",
-    messagingSenderId: "522373785417",
-    appId: "1:522373785417:web:c3577234ee165c0527dc98"
+    apiKey: "",
+    authDomain: "",
+    projectId: "",
+    storageBucket: "",
+    messagingSenderId: "",
+    appId: ""
 };
 
 // Initialize Firebase
