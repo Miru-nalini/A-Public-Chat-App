@@ -1,20 +1,34 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { useState, useEffect } from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import { AuthStore, unsub } from './src/store/AuthStore';
+import AuthNavigator from './src/navigation/AuthNavigator';
+import HomeNavigator from './src/navigation/HomeNavigator';
 
-export default function App() {
+import { app } from './src/FirebaseConfig';
+const Stack = createStackNavigator();
+
+const App = () => {
+  const { initialized, isLoggedIn } = AuthStore.useState();
+
+  useEffect(() => {
+
+    return () => unsub;
+  }, []);
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
+    <NavigationContainer>
+      <Stack.Navigator screenOptions={{ headerShown: false }}>
+        {
+          isLoggedIn ?
+            <Stack.Screen name="HomeNavigator" component={HomeNavigator} />
+            :
+            <Stack.Screen name="AuthNavigator" component={AuthNavigator} />
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+        }
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+};
+
+export default App;

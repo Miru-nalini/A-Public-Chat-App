@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "522373785417",
+    "project_id": "publicchatapp-94200",
+    "storage_bucket": "publicchatapp-94200.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:522373785417:android:400a42af7e5a8d6a27dc98",
+        "android_client_info": {
+          "package_name": "com.miru.publicChatApp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAadG2cm64-0MTxNKC418WZLAhcbOT-61E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
